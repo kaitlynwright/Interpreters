@@ -76,9 +76,3 @@ fun interp (env, AST_ID i)          = interp(lookup env i)
                                         RES_BOOL(false) => interp(env, e3)
                                         | RES_BOOL(true) => interp(env, e2)
                                         | _ => RES_ERROR "not valid type"
-
-
-
-(*val testValue = AST_APP(AST_FUN("x", 
-  AST_APP(AST_FUN("f", AST_APP(AST_FUN("x", AST_APP("f", AST_NUM(3))))), AST_NUM(1))), AST_APP(AST_FUN("y", "x"), AST_NUM(1)))
-*)

@@ -71,9 +71,3 @@ fun interp (env, AST_ID i)          = lazy_interp(lookup env i)
                                         RES_BOOL(false) => interp(env, e3)
                                         | RES_BOOL(true) => interp(env, e2)
                                         | _ => RES_ERROR "not valid type"
-
-
-(*val numTest = interp, emptyenv, (fn x => x) 42)*)
-
-
-(*interp(emptyenvFun, AST_APP(AST_SUCC, RES_NUM(42)))*)
